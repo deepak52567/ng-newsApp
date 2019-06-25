@@ -1,0 +1,18 @@
+.mat-elevation-z5{
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0), 0px 5px 8px 0px rgba(0, 0, 0, 0.04), 0px 1px 14px 0px rgba(0, 0, 0, 0.04);
+}
+
+.example-icon {
+  padding: 0 14px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+mat-toolbar {
+  background: white;
+  .logo-con {
+    margin-right: 1rem;
+  }
+}

@@ -1,0 +1,37 @@
+@import "../../app.component";
+
+:host {
+  & > .title {
+    font-size: 2rem;
+    color: $primary;
+  }
+
+  & > h4 {
+    font-weight: normal;
+    color: $black;
+    font-size: 1rem;
+  }
+
+
+  mat-dialog-content {
+    form {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 1rem;
+
+      mat-card {
+        mat-checkbox {
+          position: absolute;
+          right: 16px;
+          top: 16px;
+        }
+
+        &.selected {
+          border-color: $primary;
+        }
+      }
+    }
+  }
+}

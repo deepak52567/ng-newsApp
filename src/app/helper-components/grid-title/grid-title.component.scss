@@ -1,0 +1,20 @@
+@import "../../app.component";
+
+.section-header {
+  text-align: center;
+  margin: 4rem 0;
+  h1 {
+    font-weight: 500;
+    font-size: 2rem;
+    margin-bottom: 0.25em;
+    color: $primary;
+  }
+
+  &.dialoge {
+    margin: 0;
+    text-align: left;
+    h1 {
+      margin-top: 0.25em;
+    }
+  }
+}

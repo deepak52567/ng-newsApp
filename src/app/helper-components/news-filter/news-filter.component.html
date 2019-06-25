@@ -1,0 +1,29 @@
+<form [formGroup]="filterForm">
+  <mat-form-field appearance="outline">
+    <mat-label>Language</mat-label>
+    <mat-select placeholder="News Language" formControlName="language">
+      <mat-option [value]="">All</mat-option>
+      <mat-option [value]="options" *ngFor="let options of filterObject.language">{{options | uppercase }}</mat-option>
+    </mat-select>
+    <mat-icon matSuffix>language</mat-icon>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Country</mat-label>
+    <mat-select placeholder="Country" formControlName="country">
+      <mat-option [value]="">All</mat-option>
+      <mat-option [value]="options" *ngFor="let options of filterObject.country">{{options | uppercase }}</mat-option>
+    </mat-select>
+    <mat-icon matSuffix>flag</mat-icon>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Category</mat-label>
+    <mat-select placeholder="Category" formControlName="category">
+      <mat-option [value]="">All</mat-option>
+      <mat-option [value]="options" *ngFor="let options of filterObject.category">{{options | uppercase }}</mat-option>
+    </mat-select>
+    <mat-icon matSuffix>language</mat-icon>
+  </mat-form-field>
+</form>
+

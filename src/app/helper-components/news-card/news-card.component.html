@@ -1,0 +1,14 @@
+<mat-card class="example-card mat-elevation-z5" [routerLink]="[article?.url]">
+  <div mat-card-image class="image_con" [style.backgroundImage]="['url('+ article?.urlToImage + ')']"></div>
+  <mat-card-title >{{article?.author}}</mat-card-title>
+  <mat-card-subtitle >{{article?.publishedAt | date}}</mat-card-subtitle>
+  <mat-card-content>
+    <h4>{{article?.title}}</h4>
+  </mat-card-content>
+
+  <!--  <mat-card-header>-->
+<!--    <div mat-card-avatar class="example-header-image"></div>-->
+<!--    <mat-card-title>{{article.author}}</mat-card-title>-->
+<!--    <mat-card-subtitle>{{article.publishedAt | date: 'short'}}</mat-card-subtitle>-->
+<!--  </mat-card-header>-->
+</mat-card>

@@ -1,0 +1,30 @@
+@import "../../app.component";
+
+:host {
+}
+mat-card {
+  box-sizing: border-box;
+  height: 100%;
+
+  .image_con {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 10rem;
+  }
+
+  mat-card-title {
+    font-size: 0.9rem;
+    color: $primary;
+    font-weight: 500;
+  }
+  mat-card-subtitle {
+    font-size: 0.8rem;
+  }
+  mat-card-content {
+    h4 {
+      color: $black;
+      font-weight: 500;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<section class="top-headlines">
+
+  <app-grid-title [titleData]="sectionTitle"></app-grid-title>
+
+  <div class="custom-grid">
+    <app-news-carousal></app-news-carousal>
+    <app-news-card [article]="article" *ngFor="let article of topNewsarticles.articles"></app-news-card>
+
+  </div>
+
+</section>
+
+
+

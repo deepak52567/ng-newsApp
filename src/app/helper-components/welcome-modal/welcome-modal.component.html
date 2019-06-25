@@ -1,0 +1,25 @@
+<h1 mat-dialog-title class="title">{{sectionTitle.title}}</h1>
+<h4 mat-dialog-title>{{sectionTitle.brief}}</h4>
+<app-news-filter [filterObject]="filteredObject" (sourceEmitter)="getInitalSources($event)"></app-news-filter>
+<mat-dialog-content>
+
+  <mat-selection-list #shoes>
+    <mat-list-option *ngFor="let source of sources?.sources" [value]="source.id">
+      <mat-icon matListIcon>
+        {{returnIcon(source.category)}}
+      </mat-icon>
+      <h3 matLine> {{source.name | uppercase}} </h3>
+      <p matLine>
+        <span> {{source.country}} </span>
+      </p>
+      <p matLine>
+        <span>{{source.description}} </span>
+      </p>
+    </mat-list-option>
+  </mat-selection-list>
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <!--  [mat-dialog-close]="true" cdkFocusInitial-->
+  <button mat-button mat-flat-button color="primary" (click)="onSubmit(shoes)">Login</button>
+</mat-dialog-actions>
