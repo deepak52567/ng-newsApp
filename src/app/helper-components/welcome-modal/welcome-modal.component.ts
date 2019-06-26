@@ -20,7 +20,7 @@ export class WelcomeModalComponent implements OnInit {
 
   private selectedSources: string[];
   sectionTitle: GridTitle;
-  private sources: SourcesResponse;
+  sources: SourcesResponse;
   private loginObject: LoginLayout;
   private sourceFilter: SourcesRequest;
   public filteredObject: FilterObjectLayout;

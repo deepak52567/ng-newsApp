@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
 
   private sourceFilter: SourcesRequest;
   private sources: SourcesResponse;
-  private categories: string[];
+  categories: string[];
 
   constructor(
     private sourcesService: SourcesService,

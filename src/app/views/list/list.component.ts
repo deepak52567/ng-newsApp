@@ -12,12 +12,12 @@ import {TopNewsResponse} from '../../interfaces/top-news';
 })
 export class ListComponent implements OnInit {
 
-  private newsArticles: DailyFeedResponse;
-  private feedTitle: GridTitle;
-  private catTitle: GridTitle;
-  private categoryParam: '';
+  newsArticles: DailyFeedResponse;
+  feedTitle: GridTitle;
+  catTitle: GridTitle;
+  categoryParam: '';
   // To Facilitate Preloader
-  private fetchingData: boolean;
+  fetchingData: boolean;
 
   constructor(
     private route: ActivatedRoute,

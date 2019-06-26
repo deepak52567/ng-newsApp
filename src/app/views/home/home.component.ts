@@ -15,12 +15,12 @@ import {DailyFeedResponse} from '../../interfaces/daily-feed';
 })
 export class HomeComponent implements OnInit {
 
-  private topNewsarticles: TopNewsResponse;
-  private dailyFeedsarticles: DailyFeedResponse;
-  private topHeadlineTitle: GridTitle;
-  private dailyFeedTitle: GridTitle;
+  topNewsarticles: TopNewsResponse;
+  dailyFeedsarticles: DailyFeedResponse;
+  topHeadlineTitle: GridTitle;
+  dailyFeedTitle: GridTitle;
   // To Facilitate Preloader
-  private fetchingData: boolean;
+  fetchingData: boolean;
 
   constructor(
     private topNewsService: TopNewsService,
