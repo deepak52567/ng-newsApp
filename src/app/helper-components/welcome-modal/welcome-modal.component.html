@@ -1,9 +1,9 @@
 <h1 mat-dialog-title class="title">{{sectionTitle.title}}</h1>
 <h4 mat-dialog-title>{{sectionTitle.brief}}</h4>
-<app-news-filter [filterObject]="filteredObject" (sourceEmitter)="getInitalSources($event)"></app-news-filter>
+<app-news-filter [filterObject]="filteredObject" (validationEmitter)="formValidated($event)" (sourceEmitter)="getInitalSources($event)"></app-news-filter>
 <mat-dialog-content>
 
-  <mat-selection-list #shoes>
+  <mat-selection-list #shoes stateChanges="{{checkSelection(shoes)}}">
     <mat-list-option *ngFor="let source of sources?.sources" [value]="source.id">
       <mat-icon matListIcon>
         {{returnIcon(source.category)}}
@@ -20,6 +20,5 @@
 
 </mat-dialog-content>
 <mat-dialog-actions align="end">
-  <!--  [mat-dialog-close]="true" cdkFocusInitial-->
-  <button mat-button mat-flat-button color="primary" (click)="onSubmit(shoes)">Login</button>
+  <button mat-button mat-flat-button color="primary" (click)="onSubmit(shoes)" cdkFocusInitial>Login</button>
 </mat-dialog-actions>

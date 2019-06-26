@@ -1,3 +1,9 @@
+export interface SourceLocalData {
+  country: string;
+  sources: string[];
+  language: string;
+}
+
 export interface SourcesRequest {
   category: string;
   language: string;
@@ -18,7 +24,7 @@ export interface SourcesResponse {
 }
 
 export interface LoginLayout {
-  category: string[];
-  language: string[];
-  country: string[];
+  sources: string[];
+  language: string;
+  country: string;
 }

@@ -1,0 +1,20 @@
+.top-headlines, .daily-feed {
+  width: 80%;
+  margin: 5rem auto 0 auto;
+  .custom-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 2rem;
+
+    app-news-carousal {
+      grid-column-start: 1;
+      grid-column-end: 5;
+    }
+
+    app-news-card {
+      cursor: pointer;
+    }
+
+  }
+}

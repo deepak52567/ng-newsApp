@@ -1,3 +1,11 @@
-<p>
-  list works!
-</p>
+<section class="top-headlines">
+
+  <app-grid-title [titleData]="feedTitle"></app-grid-title>
+
+  <div class="custom-grid">
+    <app-news-card (click)="onNavigate(article.url)" [article]="article" *ngFor="let article of newsArticles?.articles"></app-news-card>
+  </div>
+
+  <app-preloader *ngIf="fetchingData"></app-preloader>
+
+</section>

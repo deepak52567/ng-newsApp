@@ -1,4 +1,4 @@
-.top-headlines {
+.top-headlines, .daily-feed {
   width: 80%;
   margin: 5rem auto 0 auto;
   .custom-grid {
@@ -10,6 +10,10 @@
     app-news-carousal {
       grid-column-start: 1;
       grid-column-end: 5;
+    }
+
+    app-news-card {
+      cursor: pointer;
     }
 
   }

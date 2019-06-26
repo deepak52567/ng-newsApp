@@ -7,6 +7,7 @@ export class ApiKey implements HttpInterceptor {
     // add authorization header with API token if available
     const apiKey = localStorage.getItem('apiKey');
     if (apiKey) {
+      // Appending Bearer APIkey to each request
       request = request.clone({
         setHeaders: {
           Authorization: `Bearer ${apiKey}`

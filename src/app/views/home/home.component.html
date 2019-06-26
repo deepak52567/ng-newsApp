@@ -1,14 +1,28 @@
 <section class="top-headlines">
 
-  <app-grid-title [titleData]="sectionTitle"></app-grid-title>
+  <app-grid-title [titleData]="topHeadlineTitle"></app-grid-title>
 
-  <div class="custom-grid">
+  <div class="custom-grid" *ngIf="!fetchingData">
     <app-news-carousal></app-news-carousal>
-    <app-news-card [article]="article" *ngFor="let article of topNewsarticles.articles"></app-news-card>
+    <app-news-card (click)="onNavigate(article.url)" [article]="article"
+                   *ngFor="let article of topNewsarticles.articles"></app-news-card>
 
   </div>
+  <app-preloader *ngIf="fetchingData"></app-preloader>
 
 </section>
 
+<section class="daily-feed">
+
+  <app-grid-title [titleData]="dailyFeedTitle"></app-grid-title>
+
+  <div class="custom-grid" *ngIf="!fetchingData">
+    <app-news-card (click)="onNavigate(article.url)" [article]="article"
+                   *ngFor="let article of dailyFeedsarticles.articles"></app-news-card>
+  </div>
+
+  <app-preloader *ngIf="fetchingData"></app-preloader>
+
+</section>
 
 

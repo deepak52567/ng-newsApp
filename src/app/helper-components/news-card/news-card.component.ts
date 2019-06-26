@@ -11,6 +11,7 @@ export class NewsCardComponent implements OnInit {
   @Input() article: SingleTopNewsResponse;
 
   constructor() {
+    // Blank Data to prevent length error on Construction
     this.article = {
       publishedAt: '',
       author: '',

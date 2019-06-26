@@ -2,8 +2,8 @@
   <mat-form-field appearance="outline">
     <mat-label>Language</mat-label>
     <mat-select placeholder="News Language" formControlName="language">
-      <mat-option [value]="">All</mat-option>
-      <mat-option [value]="options" *ngFor="let options of filterObject.language">{{options | uppercase }}</mat-option>
+      <mat-option>Clear</mat-option>
+      <mat-option [value]="options" selected="{{options === 'en'}}" *ngFor="let options of filterObject.language">{{options | uppercase }}</mat-option>
     </mat-select>
     <mat-icon matSuffix>language</mat-icon>
   </mat-form-field>

@@ -18,29 +18,17 @@ export class SourcesService {
 
   }
 
-  private sourceObjParser(sourceObj: SourcesRequest) {
-    let finalString = '';
-    if (sourceObj.language) {
-      finalString += `&language=${sourceObj.language}`;
-    }
-    if (sourceObj.country) {
-      finalString += `&country=${sourceObj.country}`;
-    }
-    if (sourceObj.category) {
-      finalString += `&category=${sourceObj.category}`;
-    }
-    return finalString;
-  }
-
+  // Getting initial sources to facilitate user to choose for personalised Daily feed
   public getSources(sourceObj?: SourcesRequest): Observable<SourcesResponse> {
     return this.http
-      .get(this.auth.baseURL + 'sources?' + this.sourceObjParser(sourceObj))
+      .get(this.auth.baseURL + 'sources?' + this.auth.sourceObjParser(sourceObj))
       .pipe(
         retry(3),
-        tap((res: SourcesResponse) => {}),
+        tap((res: SourcesResponse) => {
+        }),
         catchError(this.auth.handleError<any>('Sources Fetching Error'))
       );
-    }
+  }
 
 
 }

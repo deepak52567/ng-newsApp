@@ -12,7 +12,8 @@ import {
   MatFormFieldModule,
   MatInputModule,
   MatSelectModule,
-  MatCheckboxModule, MatListModule
+  MatCheckboxModule, MatListModule,
+  MatSnackBarModule, MatProgressBarModule, MatProgressSpinnerModule
 } from '@angular/material';
 
 
@@ -32,7 +33,10 @@ import {
     MatInputModule,
     MatSelectModule,
     MatCheckboxModule,
-    MatListModule
+    MatListModule,
+    MatSnackBarModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule
   ],
   exports: [
     MatToolbarModule,
@@ -47,7 +51,10 @@ import {
     MatInputModule,
     MatSelectModule,
     MatCheckboxModule,
-    MatListModule
+    MatListModule,
+    MatSnackBarModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule
   ]
 })
 export class SharedMaterialModule {

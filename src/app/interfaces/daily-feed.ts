@@ -1,4 +1,4 @@
-export interface TopNewsRequest {
+export interface DailyFeedRequest {
   country: string;
   category: string;
   sources: string;
@@ -7,7 +7,7 @@ export interface TopNewsRequest {
   page: string;
 }
 
-export interface TopNewsResponse {
+export interface DailyFeedResponse {
   status: string;
   totalResults: number;
   articles: {
@@ -25,7 +25,7 @@ export interface TopNewsResponse {
   }[];
 }
 
-export interface SingleTopNewsResponse {
+export interface SingleDailyFeedResponse {
   source: {
     id: string,
     name: string

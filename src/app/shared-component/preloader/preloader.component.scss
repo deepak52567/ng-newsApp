@@ -1,0 +1,9 @@
+.preloader {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mat-progress-bar {
+    width: 80%;
+  };
+}

@@ -8,9 +8,11 @@ import {GridTitle} from '../../interfaces/grid-title';
 })
 export class GridTitleComponent implements OnInit {
 
+  // Getting Title value from INPUT parent component
   @Input() titleData: GridTitle;
 
   constructor() {
+    // Setting Default values
     this.titleData = {
       title: 'Enter Title',
       dialog: false,
