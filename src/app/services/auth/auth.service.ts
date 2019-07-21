@@ -1,6 +1,8 @@
-import {Injectable} from '@angular/core';
-import {Observable, of} from 'rxjs';
-import {LoginLayout, SourceLocalData, SourcesRequest} from '../../interfaces/sources';
+import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
+import { LoginLayout, SourceLocalData, SourcesRequest } from '../../interfaces/sources';
+import { environment } from '../../../environments/environment';
+// import {environment } from '../../../environments/environment.prod';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +10,8 @@ import {LoginLayout, SourceLocalData, SourcesRequest} from '../../interfaces/sou
 export class AuthService {
 
   // This is the Base Url to hit an specific address
-  public baseURL = 'https://newsapi.org/v2/';
+  public baseURL = environment.production ? 'https://newsapi.org/v2/' : 'https://localhost:3000';
+
   // Unique APIKey registered on NewsAPI.org to get authorised data
   public apiKey = 'e22149ae9c4d49398d95376645350a78';
 
